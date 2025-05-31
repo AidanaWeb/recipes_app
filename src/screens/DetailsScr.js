@@ -26,7 +26,7 @@ export const DetailScr = ({ route }) => {
     return (
       <ScrollView
         style={{
-          backgroundColor: "black",
+          backgroundColor: "#1c1e1f",
           padding: 10,
         }}
       >
