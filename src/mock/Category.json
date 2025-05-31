@@ -1,0 +1,32 @@
+{
+  "id": 1,
+  "name": "",
+  "recipes": [
+    {
+      "id": 1,
+      "title": "",
+      "description": "",
+      "difficulty": 3,
+      "ingredients": [
+        {
+          "id": 1,
+          "title": "",
+          "img": "",
+          "quantity": 2
+        }
+      ],
+      "todos": [
+        {
+          "index": 1,
+          "action": "",
+          "done": false
+        }
+      ],
+      "category": {
+        "id": 1,
+        "name": ""
+      },
+      "tags": []
+    }
+  ]
+}
