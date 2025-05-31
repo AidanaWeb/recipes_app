@@ -70,7 +70,7 @@ const SystemButtons = () => {
         }}
       />
       <Button
-        title={"Сохраненные"}
+        title={"Легкие"}
         titleStyle={{ fontSize: 14 }}
         containerStyle={{ flex: 1 }}
         buttonStyle={{
