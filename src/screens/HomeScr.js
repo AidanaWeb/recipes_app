@@ -1,6 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
 import { Button, Image, Text, Input, Icon } from "@rneui/themed";
-import { FlatList, ScrollView, TouchableOpacity, View } from "react-native";
+import {
+  Dimensions,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { Recipes } from "../mock/Recipes";
 import { Categories } from "../mock/Categories";
 import { noPhoto } from "../assets/links";
@@ -22,6 +28,19 @@ export const HomeScr = () => {
         >
           <RecipesPreview />
           <CategoriesButtons />
+          <View style={{ marginBottom: 150, marginTop: 30 }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: 20,
+                marginLeft: 10,
+                marginBottom: 10,
+              }}
+            >
+              Рецепт дня
+            </Text>
+            <RecipeOfTheDay />
+          </View>
         </ScrollView>
       </View>
     </View>
@@ -217,6 +236,72 @@ const RecipePreview = ({ item }) => {
   return (
     <View>
       <Text>{item.title}</Text>
+    </View>
+  );
+};
+const RecipeOfTheDay = () => {
+  const navigation = useNavigation();
+  const maxRecipes = Recipes.length;
+  let randomId = Math.floor(Math.random() * 10);
+  const recipe = Recipes.find((item) => item.id == randomId);
+  const img = recipe.img.includes("example.com") ? noPhoto : recipe.img;
+  const screenWidth = Dimensions.get("window").width;
+  const cardWidth = screenWidth - 20;
+
+  const openDetail = () => {
+    navigation.navigate("Detail", { id: recipe.id });
+  };
+
+  return (
+    <View
+      style={{
+        width: "100%",
+        marginBottom: 50,
+        borderRadius: 10,
+        overflow: "hidden",
+        backgroundColor: "#3a3f40",
+        padding: 10,
+      }}
+    >
+      <Image
+        source={{ uri: img }}
+        style={{ width: cardWidth, height: cardWidth }}
+        containerStyle={{ borderRadius: 10 }}
+      />
+      <Text style={{ color: "white", fontSize: 18, marginTop: 10 }}>
+        {recipe.title}
+      </Text>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          marginTop: 10,
+          gap: 5,
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 16 }}>Сложность:</Text>
+        <View style={{ flexDirection: "row" }}>
+          {Array(recipe.difficulty)
+            .fill(0)
+            .map((item, ind) => {
+              return (
+                <Icon
+                  id={ind.toString()}
+                  name="star"
+                  type="ion-icon"
+                  color={"#fcc82b"}
+                />
+              );
+            })}
+        </View>
+      </View>
+
+      <Button
+        title={"Перейти"}
+        containerStyle={{ borderRadius: 10, marginTop: 10 }}
+        color={"black"}
+        onPress={() => openDetail()}
+      />
     </View>
   );
 };
