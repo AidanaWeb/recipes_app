@@ -122,6 +122,7 @@ const RecipeCard = ({ item = {} }) => {
         alignItems: "center",
         gap: 10,
         padding: 5,
+        overflow: "hidden",
       }}
     >
       <Image
@@ -129,10 +130,40 @@ const RecipeCard = ({ item = {} }) => {
         style={{ width: 80, height: "100%", borderRadius: 10 }}
         containerStyle={{ borderRadius: 10 }}
       />
-      <Text style={{ flex: 1, flexWrap: "wrap" }} numberOfLines={2}>
-        {item.title}
-      </Text>
+      <View
+        style={{
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <Text
+          style={{
+            flexWrap: "wrap",
+            maxWidth: 100,
+          }}
+          numberOfLines={2}
+        >
+          {item.title}
+        </Text>
+        <Line />
+        <Text numberOfLines={1} style={{ fontSize: 12, opacity: 0.3 }}>
+          {item.category.name}
+        </Text>
+      </View>
     </TouchableOpacity>
+  );
+};
+const Line = () => {
+  return (
+    <View
+      style={{
+        backgroundColor: "black",
+        width: "80%",
+        height: 1,
+        opacity: 0.1,
+        marginTop: 5,
+      }}
+    ></View>
   );
 };
 const CategoriesButtons = () => {
