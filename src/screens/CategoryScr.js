@@ -52,6 +52,7 @@ const RecipePreview = ({ item }) => {
   const screenWidth = Dimensions.get("window").width;
   const gap = 20;
   const itemWidth = (screenWidth - gap * 2) / 3;
+  const itemImage = item.img.includes("example.com") ? noPhoto : item.img;
 
   const openDetail = (itemId) => {
     navigation.navigate("Detail", { id: itemId });
@@ -75,7 +76,9 @@ const RecipePreview = ({ item }) => {
         }}
       >
         <Image
-          source={{ uri: item.img ?? noPhoto }}
+          source={{
+            uri: itemImage,
+          }}
           style={{
             width: itemWidth,
             height: itemWidth,
