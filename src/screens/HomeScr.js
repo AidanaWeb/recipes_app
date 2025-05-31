@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { Button, Image, Text } from "@rneui/themed";
+import { Button, Image, Text, Input, Icon } from "@rneui/themed";
 import { FlatList, ScrollView, TouchableOpacity, View } from "react-native";
 import { Recipes } from "../mock/Recipes";
 import { Categories } from "../mock/Categories";
@@ -8,12 +8,71 @@ export const HomeScr = () => {
   const navigation = useNavigation();
 
   return (
-    <ScrollView style={{ backgroundColor: "black", padding: 10 }}>
-      <CategoriesButtons />
-    </ScrollView>
+    <View style={{ flex: 1, backgroundColor: "black" }}>
+      <SearchInput />
+      <SystemButtons />
+
+      <ScrollView style={{ backgroundColor: "black", padding: 10 }}>
+        <CategoriesButtons />
+      </ScrollView>
+    </View>
   );
 };
 
+const SearchInput = () => {
+  return (
+    <View style={{ marginTop: 10 }}>
+      <Input
+        inputContainerStyle={{
+          backgroundColor: "#272929",
+          borderRadius: 20,
+          borderBottomWidth: 0,
+        }}
+        inputStyle={{
+          color: "#fff",
+        }}
+        leftIconContainerStyle={{ marginHorizontal: 10 }}
+        leftIcon={<Icon name="search" type="ion-icon" color="white" />}
+      />
+    </View>
+  );
+};
+const SystemButtons = () => {
+  return (
+    <View style={{ flexDirection: "row", gap: 10 }}>
+      <Button
+        title={"Избранное"}
+        titleStyle={{ fontSize: 14 }}
+        containerStyle={{ flex: 1 }}
+        buttonStyle={{
+          backgroundColor: "transparent",
+          color: "white",
+          paddingVertical: 2,
+        }}
+      />
+      <Button
+        title={"Популярные"}
+        titleStyle={{ fontSize: 14 }}
+        containerStyle={{ flex: 1 }}
+        buttonStyle={{
+          backgroundColor: "transparent",
+          color: "white",
+          paddingVertical: 2,
+        }}
+      />
+      <Button
+        title={"Сохраненные"}
+        titleStyle={{ fontSize: 14 }}
+        containerStyle={{ flex: 1 }}
+        buttonStyle={{
+          backgroundColor: "transparent",
+          color: "white",
+          paddingVertical: 2,
+        }}
+      />
+    </View>
+  );
+};
 const CategoriesButtons = () => {
   return (
     <View>
