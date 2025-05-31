@@ -95,7 +95,7 @@ const RecipesPreview = () => {
       >
         {Recipes.map((item) => {
           if (item.id <= 10) {
-            return <RecipeCard id={item.id} item={item} />;
+            return <RecipeCard id={item.id.toString()} item={item} />;
           }
         })}
       </ScrollView>
@@ -103,11 +103,12 @@ const RecipesPreview = () => {
   );
 };
 const RecipeCard = ({ item = {} }) => {
+  const navigation = useNavigation();
   const img = item.img.includes("example.com") ? noPhoto : item.img;
 
   return (
-    <View
-      id={item.id.toString()}
+    <TouchableOpacity
+      onPress={() => navigation.navigate("Detail", { id: item.id })}
       style={{
         backgroundColor: "white",
         marginRight: 20,
@@ -128,7 +129,7 @@ const RecipeCard = ({ item = {} }) => {
       <Text style={{ flex: 1, flexWrap: "wrap" }} numberOfLines={2}>
         {item.title}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 const CategoriesButtons = () => {
