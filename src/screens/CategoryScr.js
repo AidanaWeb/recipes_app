@@ -12,6 +12,12 @@ import { Recipes as mockRecipes } from "../mock/Recipes";
 import { useNavigation } from "@react-navigation/native";
 import { noPhoto } from "../assets/links";
 
+const images = {
+  1: require("../assets/drinksCover.jpeg"),
+  2: require("../assets/meatCover.jpg"),
+  3: require("../assets/vegCover.jpeg"),
+  4: require("../assets/dessertCover.jpg"),
+};
 export const CategoryScr = ({ route }) => {
   const { id } = route.params;
   const category = Categories.find((item) => item.id === id);
@@ -19,9 +25,11 @@ export const CategoryScr = ({ route }) => {
 
   return (
     <ImageBackground
-      source={{ uri: category.coverImg }}
+      // source={{ uri: category.coverImg }}
+      source={images[id]}
       style={{ flex: 1 }}
       resizeMode="cover"
+      backgroundColor={"black"}
     >
       <FlatList
         style={{ padding: 10 }}
