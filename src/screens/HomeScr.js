@@ -271,6 +271,10 @@ const RecipeOfTheDay = () => {
       <Text style={{ color: "white", fontSize: 18, marginTop: 10 }}>
         {recipe.title}
       </Text>
+      <Text style={{ color: "white", opacity: 0.6 }}>
+        Категория: {recipe.category.name}
+      </Text>
+
       <View
         style={{
           flexDirection: "row",
