@@ -117,6 +117,12 @@ export const DetailScr = ({ route }) => {
             );
           })}
         </View>
+
+        <Button
+          title={"Начать готовить"}
+          containerStyle={{ marginBottom: 50, marginTop: 30, borderRadius: 10 }}
+          color={"#3a3f40"}
+        />
       </ScrollView>
     );
   }
