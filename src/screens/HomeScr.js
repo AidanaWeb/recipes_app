@@ -3,18 +3,24 @@ import { Button, Image, Text, Input, Icon } from "@rneui/themed";
 import { FlatList, ScrollView, TouchableOpacity, View } from "react-native";
 import { Recipes } from "../mock/Recipes";
 import { Categories } from "../mock/Categories";
+import { noPhoto } from "../assets/links";
 
 export const HomeScr = () => {
   const navigation = useNavigation();
 
   return (
     <View style={{ flex: 1, backgroundColor: "black" }}>
-      <SearchInput />
-      <SystemButtons />
+      <View>
+        <SearchInput />
+        <SystemButtons />
+      </View>
 
-      <ScrollView style={{ backgroundColor: "black", padding: 10 }}>
-        <CategoriesButtons />
-      </ScrollView>
+      <View>
+        <ScrollView style={{ backgroundColor: "black", padding: 10 }}>
+          <RecipesPreview />
+          <CategoriesButtons />
+        </ScrollView>
+      </View>
     </View>
   );
 };
@@ -39,7 +45,7 @@ const SearchInput = () => {
 };
 const SystemButtons = () => {
   return (
-    <View style={{ flexDirection: "row", gap: 10 }}>
+    <View style={{ flexDirection: "row", gap: 10, marginBottom: 10 }}>
       <Button
         title={"Избранное"}
         titleStyle={{ fontSize: 14 }}
@@ -73,9 +79,57 @@ const SystemButtons = () => {
     </View>
   );
 };
+const RecipesPreview = () => {
+  return (
+    <View style={{ marginTop: 20 }}>
+      <Text style={{ color: "white", fontSize: 20, marginLeft: 10 }}>
+        Популярные
+      </Text>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        style={{
+          marginTop: 10,
+        }}
+      >
+        {Recipes.map((item) => {
+          if (item.id <= 10) {
+            const img = item.img.includes("example.com") ? noPhoto : item.img;
+
+            return (
+              <View
+                id={item.id.toString()}
+                style={{
+                  backgroundColor: "white",
+                  marginRight: 10,
+                  height: 80,
+                  width: 200,
+                  borderRadius: 10,
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 10,
+                  padding: 5,
+                }}
+              >
+                <Image
+                  source={{ uri: img }}
+                  style={{ width: 80, height: "100%", borderRadius: 10 }}
+                  containerStyle={{ borderRadius: 10 }}
+                />
+                <Text style={{ flex: 1, flexWrap: "wrap" }} numberOfLines={2}>
+                  {item.title}
+                </Text>
+              </View>
+            );
+          }
+        })}
+      </ScrollView>
+    </View>
+  );
+};
 const CategoriesButtons = () => {
   return (
-    <View>
+    <View style={{ marginTop: 20 }}>
       <Text style={{ color: "#fff", fontSize: 20, margin: 10 }}>Категории</Text>
       <View style={{ flexDirection: "column", gap: 20 }}>
         {Categories.map((item) => {
