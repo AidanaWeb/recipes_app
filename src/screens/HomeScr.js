@@ -85,6 +85,7 @@ const RecipesPreview = () => {
       <Text style={{ color: "white", fontSize: 20, marginLeft: 10 }}>
         Популярные
       </Text>
+
       <ScrollView
         horizontal={true}
         showsHorizontalScrollIndicator={false}
@@ -94,36 +95,39 @@ const RecipesPreview = () => {
       >
         {Recipes.map((item) => {
           if (item.id <= 10) {
-            const img = item.img.includes("example.com") ? noPhoto : item.img;
-
-            return (
-              <View
-                id={item.id.toString()}
-                style={{
-                  backgroundColor: "white",
-                  marginRight: 20,
-                  height: 80,
-                  width: 200,
-                  borderRadius: 10,
-                  flexDirection: "row",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: 5,
-                }}
-              >
-                <Image
-                  source={{ uri: img }}
-                  style={{ width: 80, height: "100%", borderRadius: 10 }}
-                  containerStyle={{ borderRadius: 10 }}
-                />
-                <Text style={{ flex: 1, flexWrap: "wrap" }} numberOfLines={2}>
-                  {item.title}
-                </Text>
-              </View>
-            );
+            return <RecipeCard id={item.id} item={item} />;
           }
         })}
       </ScrollView>
+    </View>
+  );
+};
+const RecipeCard = ({ item = {} }) => {
+  const img = item.img.includes("example.com") ? noPhoto : item.img;
+
+  return (
+    <View
+      id={item.id.toString()}
+      style={{
+        backgroundColor: "white",
+        marginRight: 20,
+        height: 80,
+        width: 200,
+        borderRadius: 10,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+        padding: 5,
+      }}
+    >
+      <Image
+        source={{ uri: img }}
+        style={{ width: 80, height: "100%", borderRadius: 10 }}
+        containerStyle={{ borderRadius: 10 }}
+      />
+      <Text style={{ flex: 1, flexWrap: "wrap" }} numberOfLines={2}>
+        {item.title}
+      </Text>
     </View>
   );
 };
