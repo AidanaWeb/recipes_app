@@ -3,6 +3,7 @@ import { ScrollView, View } from "react-native";
 import { Recipes } from "../mock/Recipes";
 import { useFocusEffect } from "@react-navigation/native";
 import React, { useState } from "react";
+import { noPhoto } from "../assets/links";
 
 export const DetailScr = ({ route }) => {
   const { id } = route.params;
@@ -20,6 +21,8 @@ export const DetailScr = ({ route }) => {
   );
 
   if (recipe.id) {
+    const img = recipe.img.includes("example.com") ? noPhoto : recipe.img;
+
     return (
       <ScrollView
         style={{
@@ -29,7 +32,7 @@ export const DetailScr = ({ route }) => {
       >
         <View>
           <Image
-            source={{ uri: recipe.img }}
+            source={{ uri: img }}
             style={{ width: "100%", height: 300 }}
             containerStyle={{ borderRadius: 10 }}
           />

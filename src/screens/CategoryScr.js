@@ -10,9 +10,7 @@ import {
 import { Categories } from "../mock/Categories";
 import { Recipes as mockRecipes } from "../mock/Recipes";
 import { useNavigation } from "@react-navigation/native";
-
-const noPhoto =
-  "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
+import { noPhoto } from "../assets/links";
 
 export const CategoryScr = ({ route }) => {
   const { id } = route.params;
