@@ -189,7 +189,7 @@ const CategoriesButtons = () => {
   return (
     <View style={{ marginTop: 20 }}>
       <Text style={{ color: "#fff", fontSize: 20, margin: 10 }}>Категории</Text>
-      <View style={{ flexDirection: "column", gap: 20 }}>
+      <View style={{ flexDirection: "column", gap: 15 }}>
         {Categories.map((item) => {
           return <Category id={item.id} item={item} />;
         })}
