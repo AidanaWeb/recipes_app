@@ -34,7 +34,8 @@ export const RootStack = () => {
         options={{
           title: "Категория",
           headerBackButtonDisplayMode: "minimal",
-          headerTintColor: "black",
+          headerTintColor: "white",
+          headerStyle: { backgroundColor: "black" },
         }}
       />
     </Stack.Navigator>
