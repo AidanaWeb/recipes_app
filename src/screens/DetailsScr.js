@@ -122,6 +122,9 @@ export const DetailScr = ({ route }) => {
           title={"Начать готовить"}
           containerStyle={{ marginBottom: 50, marginTop: 30, borderRadius: 10 }}
           color={"#3a3f40"}
+          icon={
+            <Icon name="play-arrow" type="material-icons" color={"white"} />
+          }
         />
       </ScrollView>
     );
