@@ -297,6 +297,19 @@ const RecipeOfTheDay = () => {
                 />
               );
             })}
+          {Array(5 - Number(recipe.difficulty))
+            .fill(0)
+            .map((item, ind) => {
+              return (
+                <Icon
+                  id={ind.toString()}
+                  name="star"
+                  type="ion-icon"
+                  color={"#fcc82b"}
+                  style={{ opacity: 0.2 }}
+                />
+              );
+            })}
         </View>
       </View>
 
