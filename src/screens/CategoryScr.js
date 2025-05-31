@@ -75,7 +75,7 @@ const RecipePreview = ({ item }) => {
         }}
       >
         <Image
-          source={{ uri: noPhoto }}
+          source={{ uri: item.img ?? noPhoto }}
           style={{
             width: itemWidth,
             height: itemWidth,

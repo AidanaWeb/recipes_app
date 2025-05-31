@@ -2,7 +2,7 @@ export const Recipes = [
   {
     id: 1,
     title: "Клубничный смузи",
-    img: "https://example.com/images/strawberry-smoothie.jpg",
+    img: "https://media.istockphoto.com/id/1163888909/photo/refreshing-strawberry-mint-and-lemon-iced-tea-or-lemonade-in-glasses.jpg?s=612x612&w=0&k=20&c=XESrDbYlF_Cg0JoAX1dquX3yHpM8A_sfo7auD-3yqik=",
     description: "Освежающий напиток из клубники и банана.",
     difficulty: 1,
     ingredients: [
@@ -128,7 +128,7 @@ export const Recipes = [
   {
     id: 5,
     title: "Освежающий лимонад",
-    img: "https://example.com/images/lemonade.jpg",
+    img: "https://images4.alphacoders.com/108/1085585.jpg",
     description: "Простой домашний лимонад.",
     difficulty: 1,
     ingredients: [
@@ -260,7 +260,7 @@ export const Recipes = [
   {
     id: 9,
     title: "Фруктовый коктейль",
-    img: "https://example.com/images/fruit-cocktail.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXlhwyNYU4zXHGAB-4YJLhyq-sfxCRqorig&s",
     description: "Напиток из свежих фруктов и льда.",
     difficulty: 1,
     ingredients: [
