@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeScr } from "../screens/HomeScr";
 import { Text } from "@rneui/themed";
 import { DetailScr } from "../screens/DetailsScr";
+import { CategoryScr } from "../screens/CategoryScr";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,8 @@ export const RootStack = () => {
         component={HomeScr}
         options={{
           title: "Главная",
+          headerStyle: { backgroundColor: "black" },
+          headerTitleStyle: { color: "#fff" },
         }}
       />
       <Stack.Screen
@@ -21,6 +24,15 @@ export const RootStack = () => {
         component={DetailScr}
         options={{
           title: "Рецепт",
+          headerBackButtonDisplayMode: "minimal",
+          headerTintColor: "black",
+        }}
+      />
+      <Stack.Screen
+        name="Category"
+        component={CategoryScr}
+        options={{
+          title: "Категория",
           headerBackButtonDisplayMode: "minimal",
           headerTintColor: "black",
         }}
