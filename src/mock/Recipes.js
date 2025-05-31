@@ -35,7 +35,7 @@ export const Recipes = [
   {
     id: 2,
     title: "Бифштекс с луком",
-    img: "https://example.com/images/beefsteak.jpg",
+    img: "https://img.povar.ru/mobile/9b/33/4e/22/rublenii_bifshteks_po-golshteinski-41078.jpg",
     description: "Сочный бифштекс с карамелизированным луком.",
     difficulty: 3,
     ingredients: [
@@ -62,7 +62,7 @@ export const Recipes = [
   {
     id: 3,
     title: "Салат с нутом и овощами",
-    img: "https://example.com/images/chickpea-salad.jpg",
+    img: "https://eda.ru/images/RecipePhoto/620x415/salat-s-nutom-i-svezhimi-ovoshhami_53998_photo_64819.webp",
     description: "Лёгкий и питательный вегетарианский салат.",
     difficulty: 2,
     ingredients: [
@@ -95,7 +95,7 @@ export const Recipes = [
   {
     id: 4,
     title: "Панна котта",
-    img: "https://example.com/images/panna-cotta.jpg",
+    img: "https://klopotenko.com/wp-content/uploads/2021/05/desert-panna-kotta_siteweb-1000x600.jpg?v=1622492038",
     description: "Итальянский сливочный десерт с ванилью.",
     difficulty: 3,
     ingredients: [
@@ -161,7 +161,7 @@ export const Recipes = [
   {
     id: 6,
     title: "Курица в медово-горчичном соусе",
-    img: "https://example.com/images/honey-mustard-chicken.jpg",
+    img: "https://olkhon138.ru/upload/2355660c-9ff6-646e-11de-628bb140bf9e_image_c",
     description: "Ароматная курица с пикантным соусом.",
     difficulty: 3,
     ingredients: [
@@ -194,7 +194,7 @@ export const Recipes = [
   {
     id: 7,
     title: "Овощное рагу",
-    img: "https://example.com/images/vegetable-stew.jpg",
+    img: "https://img.iamcook.ru/2019/upl/recipes/zen/u-199ebd159ed6e7baabd66165ddfff293.JPG",
     description: "Сытное блюдо из сезонных овощей.",
     difficulty: 2,
     ingredients: [
@@ -227,7 +227,7 @@ export const Recipes = [
   {
     id: 8,
     title: "Тирамису",
-    img: "https://example.com/images/tiramisu.jpg",
+    img: "https://icdn.lenta.ru/images/2024/06/28/12/20240628123130081/detail_e9fe78409e720642148fe5c1dd40f878.jpg",
     description: "Классический итальянский десерт с маскарпоне.",
     difficulty: 3,
     ingredients: [
@@ -293,7 +293,7 @@ export const Recipes = [
   {
     id: 10,
     title: "Чизкейк Нью-Йорк",
-    img: "https://example.com/images/cheesecake.jpg",
+    img: "https://la-torta.ua/content/uploads/images/12-cake.jpg",
     description: "Классический чизкейк с хрустящей основой.",
     difficulty: 3,
     ingredients: [
@@ -497,7 +497,7 @@ export const Recipes = [
   {
     id: 21,
     title: "Овощное рагу",
-    img: "https://example.com/img/vegetable-stew.jpg",
+    img: "https://img1.russianfood.com/dycontent/images_upl/612/sm_611303.jpg",
     description: "Питательное блюдо без мяса.",
     difficulty: 2,
     ingredients: [
@@ -515,7 +515,7 @@ export const Recipes = [
   {
     id: 22,
     title: "Запечённая цветная капуста",
-    img: "https://example.com/img/roasted-cauliflower.jpg",
+    img: "https://i0.wp.com/www.cookingpalette.net/wp-content/uploads/2018/09/roasted-whole-cauliflower-head00011.jpg?resize=678%2C381&ssl=1",
     description: "Хрустящая и ароматная закуска.",
     difficulty: 2,
     ingredients: [
@@ -603,7 +603,7 @@ export const Recipes = [
   {
     id: 27,
     title: "Панкейки",
-    img: "https://example.com/img/pancakes.jpg",
+    img: "https://www.povarenok.ru/data/cache/2015jul/28/49/1215004_54554-710x550x.jpg",
     description: "Пышные оладьи на завтрак.",
     difficulty: 2,
     ingredients: [
@@ -621,7 +621,7 @@ export const Recipes = [
   {
     id: 28,
     title: "Яблочный штрудель",
-    img: "https://example.com/img/apple-strudel.jpg",
+    img: "https://images.gastronom.ru/vjXfEOyc8Ofv_GCEp_QBqJMMOj77gpkZyEwjTXB_V9E/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzcxOGY4YjU1LWMyZDctNDJkMC04YWFhLTZkYTU2MDk5ZDdiOC5qcGc.webp",
     description: "Тонкое тесто с яблоками и корицей.",
     difficulty: 3,
     ingredients: [
