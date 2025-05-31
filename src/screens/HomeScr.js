@@ -101,7 +101,7 @@ const RecipesPreview = () => {
                 id={item.id.toString()}
                 style={{
                   backgroundColor: "white",
-                  marginRight: 10,
+                  marginRight: 20,
                   height: 80,
                   width: 200,
                   borderRadius: 10,
