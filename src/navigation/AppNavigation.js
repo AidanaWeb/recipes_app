@@ -4,6 +4,7 @@ import { HomeScr } from "../screens/HomeScr";
 import { Text } from "@rneui/themed";
 import { DetailScr } from "../screens/DetailsScr";
 import { CategoryScr } from "../screens/CategoryScr";
+import { THEME } from "../AppSettings";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ export const RootStack = () => {
         component={HomeScr}
         options={{
           title: "Главная",
-          headerStyle: { backgroundColor: "#1c1e1f" },
+          headerStyle: { backgroundColor: THEME.mainBlackColor },
           headerTitleStyle: { color: "#fff" },
         }}
       />
@@ -26,7 +27,7 @@ export const RootStack = () => {
           title: "Рецепт",
           headerBackButtonDisplayMode: "minimal",
           headerTintColor: "white",
-          headerStyle: { backgroundColor: "#1c1e1f" },
+          headerStyle: { backgroundColor: THEME.mainBlackColor },
         }}
       />
       <Stack.Screen

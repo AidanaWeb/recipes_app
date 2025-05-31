@@ -4,6 +4,7 @@ import { Recipes } from "../mock/Recipes";
 import { useFocusEffect } from "@react-navigation/native";
 import React, { useState } from "react";
 import { noPhoto } from "../assets/links";
+import { THEME } from "../AppSettings";
 
 export const DetailScr = ({ route }) => {
   const { id } = route.params;
@@ -26,7 +27,7 @@ export const DetailScr = ({ route }) => {
     return (
       <ScrollView
         style={{
-          backgroundColor: "#1c1e1f",
+          backgroundColor: THEME.mainBlackColor,
           padding: 10,
         }}
       >

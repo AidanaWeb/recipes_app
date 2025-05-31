@@ -4,19 +4,22 @@ import { FlatList, ScrollView, TouchableOpacity, View } from "react-native";
 import { Recipes } from "../mock/Recipes";
 import { Categories } from "../mock/Categories";
 import { noPhoto } from "../assets/links";
+import { THEME } from "../AppSettings";
 
 export const HomeScr = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#1c1e1f" }}>
+    <View style={{ flex: 1, backgroundColor: THEME.mainBlackColor }}>
       <View>
         <SearchInput />
         <SystemButtons />
       </View>
 
       <View>
-        <ScrollView style={{ backgroundColor: "#1c1e1f", padding: 10 }}>
+        <ScrollView
+          style={{ backgroundColor: THEME.mainBlackColor, padding: 10 }}
+        >
           <RecipesPreview />
           <CategoriesButtons />
         </ScrollView>
