@@ -1,4 +1,4 @@
-import { Button, Image, Text } from "@rneui/themed";
+import { AirbnbRating, Button, Icon, Image, Text } from "@rneui/themed";
 import { ScrollView, View } from "react-native";
 import { Recipes } from "../mock/Recipes";
 import { useFocusEffect } from "@react-navigation/native";
@@ -65,6 +65,24 @@ export const DetailScr = ({ route }) => {
           {recipe.title}
         </Text>
         <Line />
+
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            marginTop: 10,
+            gap: 5,
+          }}
+        >
+          <Text style={{ color: "white", fontSize: 16 }}>Сложность:</Text>
+          <View style={{ flexDirection: "row" }}>
+            {Array(recipe.difficulty)
+              .fill(0)
+              .map((item, ind) => {
+                return <Icon name="star" type="ion-icon" color={"#fcc82b"} />;
+              })}
+          </View>
+        </View>
 
         <Text style={{ marginTop: 10, color: "white", fontSize: 16 }}>
           {recipe.description}
